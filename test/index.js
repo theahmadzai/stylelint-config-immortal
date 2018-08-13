@@ -4,7 +4,7 @@ const stylelint = require('stylelint');
 const rules = require('../src').rules;
 
 stylelint.lint({
-  code: 'a { color: pink; }',
+  code: `a { color: pink; }`,
   config: {
     rules: rules
   }
