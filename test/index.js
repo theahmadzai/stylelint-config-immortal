@@ -1,13 +1,11 @@
 'use strict';
 
 const stylelint = require('stylelint');
-const rules = require('../src').rules;
+const config = require('../src');
 
 stylelint.lint({
   code: `a { color: pink; }`,
-  config: {
-    rules: rules
-  }
+  config: config
 }).then(output => {
   const { deprecations, invalidOptionWarnings, parseErrors, warnings } = output.results[0];
   console.log(`Output:
